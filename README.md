@@ -27,6 +27,13 @@ OpenSSL 0.9.8 is preinstalled on OSX. Some features are only available when
 linking against OpenSSL 1.0.0 or greater; see below on how to point
 rust-openssl to a separate installation.
 
+If you use [Homebrew](http://brew.sh/) you can use the homebrew version of OpenSSL by running:
+
+```bash
+brew install openssl
+env OPENSSL_LIB_DIR=$(brew --prefix openssl)/lib OPENSSL_INCLUDE_DIR=$(brew --prefix openssl)/include cargo build
+```
+
 ### Windows
 
 On Windows, consider building with [mingw-w64](http://mingw-w64.org/).
